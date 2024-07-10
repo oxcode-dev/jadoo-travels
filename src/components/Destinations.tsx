@@ -1,5 +1,4 @@
-// import TopLeftDecore from '../assets/img/top-left-decore.svg'
-// import { servicesLists } from '../data'
+import { destinationsLists } from '../data'
 export const Destinations = () => {
     return (
         <>
@@ -9,30 +8,34 @@ export const Destinations = () => {
                     <p className="text-gray-500 font-semibold text-lg mb-4">Top Selling</p>
                     <h2 className='text-5xl leading-tight text-[#181E4B] font-semibold'>Top Destinations</h2>
                 </div>
-                {/* <div className='py-16 grid md:grid-cols-4 gap-8'>
+                
+                <div className='py-16 grid md:grid-cols-3 gap-8'>
                     {
-                        servicesLists.map((list, key) => (
-                            <div key={key} className='flex flex-col justify-center items-center p-10 text-center border-gray-50 hover:border hover:shadow-lg rounded-3xl space-y-4'>
-                                <img src={list.icon} alt={list.title} className='object-cover h-16' />
-                                <p className='text-[#181E4B] text-xl font-medium'>
-                                    {list.title}
-                                </p>
-                                <p className="text-[#5E6282] text-base">
-                                    {list.description}
-                                </p>
-                            </div>
+                        destinationsLists.map((list, key) => (
+                            <DestinationCard key={key} />
                         ))
                     }
-                </div> */}
+                </div>
             </div> 
         </>
     )
 }
 
 const DestinationCard = () => {
+    const list = destinationsLists[0]
     return (
         <>
-            Hello World
+            <div className='flex flex-col justify-center items-center text-center border-gray-50 border shadow-lg rounded-3xl'>
+                {
+                    typeof(list.image) === 'string' && <img src={list.image} alt={list.name} className='object-cover w-full' />
+                }
+                <p className='text-[#181E4B] text-xl font-medium'>
+                    {list.name}
+                </p>
+                <p className="text-[#5E6282] text-base">
+                    {list.description}
+                </p>
+            </div>
         </>
     )
 }

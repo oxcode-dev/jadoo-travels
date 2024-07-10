@@ -2,6 +2,9 @@ import WeatherIcon from '../assets/img/weather-icon.svg'
 import FlightIcon from '../assets/img/flight-icon.svg'
 import MicrophoneIcon from '../assets/img/microphone-icon.svg'
 import SettingIcon from '../assets/img/setting-icon.svg'
+import RomeImg from '../assets/img/rome.svg'
+import LondonImg from '../assets/img/london.svg'
+import EuropeImg from '../assets/img/city.svg'
 
 export const navigationLists = [
     'Destinations', 'Hotels', 'Flights', 'Bookings'
@@ -48,21 +51,21 @@ export const destinationsLists: destinationsListType[] = [
     {
         name: 'Rome, Italy', 
         description: 'Built Wicket longer admire do barton vanity itself do in it.', 
-        image: WeatherIcon,
+        image: RomeImg,
         cost: '$1800',
         days: '10 days trip',
     },
     {
         name: 'London, UK', 
         description: 'Engrossed listening. Park gate sell they west hard for the.', 
-        image: FlightIcon,
+        image: LondonImg,
         cost: '$1300',
         days: '15 days trip',
     },
     {
         name: 'Full Europe', 
         description: 'Barton vanity itself do in it. Preferd to men it engrossed listening.', 
-        image: MicrophoneIcon,
+        image: EuropeImg,
         cost: '$3000',
         days: '28 days trip',
     },
