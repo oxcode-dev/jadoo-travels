@@ -13,7 +13,9 @@ export const Destinations = () => {
                 <div className='py-10 grid md:grid-cols-3 gap-10 relative z-10'>
                     {
                         destinationsLists.map((list, key) => (
-                            <DestinationCard key={key} />
+                            <div key={key} >
+                                <DestinationCard destination={list} />
+                            </div>
                         ))
                     }
                 </div>
@@ -22,10 +24,19 @@ export const Destinations = () => {
     )
 }
 
+type DestinationCardProp = {
+    image: string | SVGAElement,
+    name: string,
+    days: string,
+    cost: string
+}
 
+interface DestinationInterface {
+    destination: DestinationCardProp
+}
 
-const DestinationCard = () => {
-    const list = destinationsLists[0]
+const DestinationCard = ( { destination } :DestinationInterface) => {
+    const list = destination
     return (
         <>
             <div className='w-full flex flex-col shadow-lg rounded-b-3xl'>
@@ -37,7 +48,7 @@ const DestinationCard = () => {
                         {list.name}
                     </p>
                     <p className='text-slate-700 text-lg font-medium'>
-                        {list.name}
+                        {list.cost}
                     </p>
                 </div>
 
