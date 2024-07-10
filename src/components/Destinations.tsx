@@ -9,7 +9,7 @@ export const Destinations = () => {
                     <h2 className='text-5xl leading-tight text-[#181E4B] font-semibold'>Top Destinations</h2>
                 </div>
                 
-                <div className='py-16 grid md:grid-cols-3 gap-8'>
+                <div className='py-16 grid md:grid-cols-3 gap-10'>
                     {
                         destinationsLists.map((list, key) => (
                             <DestinationCard key={key} />
@@ -25,9 +25,9 @@ const DestinationCard = () => {
     const list = destinationsLists[0]
     return (
         <>
-            <div className='flex flex-col justify-center items-center text-center border-gray-50 border shadow-lg rounded-3xl'>
+            <div className='w-full flex flex-col justify-center items-center text-center shadow-lg rounded-b-3xl'>
                 {
-                    typeof(list.image) === 'string' && <img src={list.image} alt={list.name} className='object-cover w-full' />
+                    typeof(list.image) === 'string' && <img src={list.image} alt={list.name} className='object-cover object-top w-full h-96' />
                 }
                 <p className='text-[#181E4B] text-xl font-medium'>
                     {list.name}
