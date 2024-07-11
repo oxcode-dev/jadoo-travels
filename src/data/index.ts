@@ -5,6 +5,10 @@ import SettingIcon from '../assets/img/setting-icon.svg'
 import RomeImg from '../assets/img/rome.svg'
 import LondonImg from '../assets/img/london.svg'
 import EuropeImg from '../assets/img/city.svg'
+import PaymentIcon from '../assets/img/payment-icon.svg'
+import CabIcon from '../assets/img/cab-icon.svg'
+import DestinationIcon from '../assets/img/destination-icon.svg'
+
 
 export const navigationLists = [
     'Destinations', 'Hotels', 'Flights', 'Bookings'
@@ -68,5 +72,29 @@ export const destinationsLists: destinationsListType[] = [
         image: EuropeImg,
         cost: '$3000',
         days: '28 days trip',
+    },
+]
+
+type tipListType = {
+    image: string,
+    heading: string,
+    description: string,
+}
+
+export const tipsList :tipListType[] = [
+    {
+        heading: 'Choose Destination',
+        image: DestinationIcon,
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sit.',
+    },
+    {
+        heading: 'Make Payment',
+        image: PaymentIcon,
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sit.',
+    },
+    {
+        heading: 'Reach Airport on Selected Date',
+        image: CabIcon,
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sit.',
     },
 ]

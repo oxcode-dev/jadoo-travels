@@ -34,8 +34,8 @@ const TipCard = () => {
     return (
         <>
             <div className='flex flex-nowrap items-center space-x-3 w-full sm:max-w-sm'>
-                <div className='w-12 h-12 bg-red-600 rounded-lg'>
-                    <img src={PaymentIcon} className='object-cover w-full h-full' />
+                <div className='bg-transparent rounded-lg'>
+                    <img src={PaymentIcon} className='object-contain w-16 h-16' />
                 </div>
                 <div className=''>
                     <p className='text-base font-semibold text-slate-600'>
