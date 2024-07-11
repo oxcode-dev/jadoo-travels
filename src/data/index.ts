@@ -8,6 +8,11 @@ import EuropeImg from '../assets/img/city.svg'
 import PaymentIcon from '../assets/img/payment-icon.svg'
 import CabIcon from '../assets/img/cab-icon.svg'
 import DestinationIcon from '../assets/img/destination-icon.svg'
+import Jetstar from '../assets/img/jetstar.svg'
+import Axon from '../assets/img/axon.svg'
+import Litalia from '../assets/img/litalia.svg'
+import Qantas from '../assets/img/qantas.svg'
+import Expedia from '../assets/img/expedia.svg'
 
 
 export const navigationLists = [
@@ -96,5 +101,33 @@ export const tipsList :tipListType[] = [
         heading: 'Reach Airport on Selected Date',
         image: CabIcon,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sit.',
+    },
+]
+
+type partnerListType = {
+    name: string,
+    image: string,
+}
+
+export const partnersList :partnerListType[] = [
+    {
+        name: 'Axon Airlines',
+        image: Axon,
+    },
+    {
+        name: 'Jetstar',
+        image: Jetstar,
+    },
+    {
+        name: 'Expedia',
+        image: Expedia,
+    },
+    {
+        name: 'Qantas',
+        image: Qantas,
+    },
+    {
+        name: 'Litalia',
+        image: Litalia,
     },
 ]
