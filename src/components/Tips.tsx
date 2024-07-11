@@ -1,5 +1,5 @@
 import BookingImage from '../assets/img/booking-img.svg'
-import PaymentIcon from '../assets/img/cab-icon.svg'
+import { tipsList } from '../data/index'
 
 export const Tips = () => {
     return (
@@ -15,9 +15,13 @@ export const Tips = () => {
                                 Book Your Next Trip <br /> In 3 Easy Steps
                             </h2>
                             <div className='space-y-4 py-4'>
-                                <TipCard />
-                                <TipCard />
-                                <TipCard />
+                                {
+                                    tipsList.map((list, key) => (
+                                        <div key={key}>
+                                            <TipCard tip={list} />
+                                        </div>
+                                    ))
+                                }
                             </div>
                         </div>
                     </div>
@@ -30,19 +34,29 @@ export const Tips = () => {
     )
 }
 
-const TipCard = () => {
+type TipCardProp = {
+    image: string,
+    heading: string,
+    description: string,
+}
+
+interface TipInterface {
+    tip: TipCardProp
+}
+
+const TipCard = ({ tip } :TipInterface) => {
     return (
         <>
             <div className='flex flex-nowrap items-center space-x-3 w-full sm:max-w-sm'>
                 <div className='bg-transparent rounded-lg'>
-                    <img src={PaymentIcon} className='object-contain w-16 h-16' />
+                    <img src={tip.image} className='object-contain w-16 h-16' />
                 </div>
                 <div className=''>
                     <p className='text-base font-semibold text-slate-600'>
-                        Choose Destination
+                        {tip.heading}
                     </p>
                     <p className='text-sm font-normal text-slate-500'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sit.
+                        {tip.description}
                     </p>
                 </div>
             </div>

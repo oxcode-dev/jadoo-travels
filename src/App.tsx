@@ -3,6 +3,7 @@ import { Hero } from "./components/Hero"
 import { Services } from "./components/Services"
 import { Destinations } from "./components/Destinations"
 import { Tips } from "./components/Tips"
+import { Testimonials } from "./components/Testimonials"
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
         <Services />
         <Destinations />
         <Tips />
+        <Testimonials />
       </Layout>
     </>
   )
