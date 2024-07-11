@@ -41,7 +41,7 @@ const DestinationCard = ( { destination } :DestinationInterface) => {
         <>
             <div className='w-full flex flex-col shadow-lg rounded-b-3xl'>
                 {
-                    typeof(list.image) === 'string' && <img src={list.image} alt={list.name} className='object-cover object-top w-full h-80' />
+                    typeof(list.image) === 'string' && <img src={list.image} alt={list.name} className='object-cover object-top w-full h-80 bg-white' />
                 }
                 <div className='flex items-center justify-between w-full px-4 pt-4 py-2 z-10 bg-white'>
                     <p className='text-slate-700 text-lg font-medium'>
