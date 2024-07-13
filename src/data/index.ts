@@ -19,8 +19,24 @@ export const navigationLists = [
     'Destinations', 'Hotels', 'Flights', 'Bookings'
 ]
 
-export const companyNavigationLists = [
-    'Destinations', 'Hotels', 'Flights', 'Bookings'
+type footerNavsType = {
+    name: string,
+    links: string[]
+}
+
+export const footerNavigationLists: footerNavsType[] = [
+    {
+        name: 'Company',
+        links: ['About', 'Careers', 'Mobile',]
+    },
+    {
+        name: 'Contact',
+        links: ['Help/FAQs', 'Press', 'Affiliates']
+    },
+    {
+        name: 'More',
+        links: ['Airline Fees', 'Airlines', 'Low Fares Tips']
+    }
 ]
 
 type servicesListType = {

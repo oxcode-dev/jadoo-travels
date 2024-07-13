@@ -1,5 +1,5 @@
 import logo from "../assets/logo.svg"
-import { navigationLists } from '../data/index.ts'
+import { footerNavigationLists } from '../data/index.ts'
 
 export const Footer = () => {
     return (
@@ -15,7 +15,29 @@ export const Footer = () => {
                                 Book your trip in minute, get full <br />Control for much longer.
                             </p>
                         </div>
-                        <div className="w-full md:w-2/4">Hello Links</div>
+                        <div className="w-full md:w-2/4">
+                            <div className="">
+                                {
+                                    footerNavigationLists.map((list, key) => (
+                                        <div>
+                                            <p>Company</p>
+                                            <ul className="flex flex-col">
+                                                {
+                                                    list.links.map((nav, index) => (
+                                                        <li className="inline-flex h-auto" key={index}>
+                                                            <a href="#" className="py-4 w-full">
+                                                                {nav}
+                                                            </a>
+                                                        </li>
+                                                    ))
+                                                }
+                                            </ul>
+                                        </div>
+                                    ))
+                                }
+                                
+                            </div>
+                        </div>
                         <div className="w-full md:w-1/4">Hello Socials</div>
                     </div>
                     <div className="py-8">
