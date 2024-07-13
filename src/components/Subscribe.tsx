@@ -1,12 +1,15 @@
 import SubscribeUp from '../assets/img/subscribe-up.svg'
 import SubscribeDown from '../assets/img/subscribe-down.svg'
 import SubscribeIcon from '../assets/img/subscribe-icon.svg'
+import SubscribeDecore from '../assets/img/subscribe-decore.svg'
 export const Subscribe = () => {
     return (
         <>
-            <div className="container mx-auto py-16">
-                <div className="w-full bg-purple-50 relative rounded-3xl rounded-tl-5xl overflow-hidden relative">
-                    <img src={SubscribeIcon} className='absolute top-0 right-0' />
+            <div className="container mx-auto py-12 relative px-4">
+                <img src={SubscribeIcon} className='absolute top-4 left-28 z-10' />
+                <img src={SubscribeIcon} className='absolute top-4 right-0 z-10' />
+                <img src={SubscribeDecore} className='absolute bottom-0 md:-right-8' />
+                <div className="w-full bg-purple-50 relative rounded-3xl rounded-tl-5xl overflow-hidden relative md:rounded-tl-[10rem]">
                     <img src={SubscribeDown} className='absolute top-0 right-0' />
                     <img src={SubscribeUp} className='absolute bottom-0 -left-24' />
 
