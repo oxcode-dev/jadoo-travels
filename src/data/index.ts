@@ -19,6 +19,10 @@ export const navigationLists = [
     'Destinations', 'Hotels', 'Flights', 'Bookings'
 ]
 
+export const companyNavigationLists = [
+    'Destinations', 'Hotels', 'Flights', 'Bookings'
+]
+
 type servicesListType = {
     title: string,
     description: string,
