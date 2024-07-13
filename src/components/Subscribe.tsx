@@ -19,7 +19,7 @@ export const Subscribe = () => {
                         </p>
                         <div className="w-full py-10 relative z-2">
                             <div className="w-full mx-auto md:max-w-xl flex space-x-4">
-                                <input type="email" className="h-16 py-2 px-3 rounded-xl w-full " />
+                                <input placeholder='Your email' type="email" className="placeholder:text-slate-700 h-16 py-2 px-3 rounded-xl w-full " />
                                 <button className="h-16 py-2 px-6 rounded-xl bg-[#FF946D] text-white">
                                     Subscribe
                                 </button>
