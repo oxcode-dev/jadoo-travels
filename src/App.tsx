@@ -4,7 +4,8 @@ import { Services } from "./components/Services"
 import { Destinations } from "./components/Destinations"
 import { Tips } from "./components/Tips"
 import { Testimonials } from "./components/Testimonials"
-import { Parnters } from "./components/Partners"
+import { Partners } from "./components/Partners"
+import { Subscribe } from "./components/Subscribe"
 
 function App() {
 
@@ -16,7 +17,8 @@ function App() {
         <Destinations />
         <Tips />
         <Testimonials />
-        <Parnters />
+        <Partners />
+        <Subscribe />
       </Layout>
     </>
   )

@@ -1,5 +1,5 @@
 import { partnersList } from '../data/index'
-export const Parnters = () => {
+export const Partners = () => {
     return (
         <>
             <div className="container mx-auto py-16 px-4">
