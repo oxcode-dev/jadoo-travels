@@ -32,7 +32,7 @@ export const Hero = () => {
                             </button>
                         </div>
                     </div>
-                    <div className="absolute right-20 z-50 top-24">
+                    <div className="absolute right-20 z-40 top-24">
                         <img src={HeroImg} className="" />
                     </div>
                 </div>
