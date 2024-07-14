@@ -3,14 +3,14 @@ import Decore from '../assets/img/destination-decore.svg'
 export const Destinations = () => {
     return (
         <>
-            <div className="container mx-auto py-8 relative px-20">
+            <div className="container mx-auto py-8 relative px-5 md:px-20">
                 <img className='right-4 absolute bottom-40 object-contain z-1' src={Decore} />
-                <div className="text-center py-10">
+                <div className="text-center py-6 md:py-10">
                     <p className="text-gray-500 font-semibold text-lg mb-4">Top Selling</p>
-                    <h2 className='text-5xl leading-tight text-[#181E4B] font-semibold'>Top Destinations</h2>
+                    <h2 className='text-2xl md:text-5xl leading-tight text-[#181E4B] font-semibold'>Top Destinations</h2>
                 </div>
                 
-                <div className='py-10 grid md:grid-cols-3 gap-10 relative z-10'>
+                <div className='py-10 grid md:grid-cols-3 gap-6 md:gap-10 relative z-10'>
                     {
                         destinationsLists.map((list, key) => (
                             <div key={key} >
