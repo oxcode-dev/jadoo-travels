@@ -8,16 +8,16 @@ export const Hero = () => {
             <div className="relative w-full bg-no-repeat bg-contain min-h-screen"> 
                 <img src={HeroBanner} className="w-full" />
                 <div className="mx-auto w-full absolute top-0">
-                    <div className="w-1/2 pr-20 pl-20 flex flex-col mt-40 space-y-4">
-                        <p className="uppercase text-red-600 font-semibold text-lg">
+                    <div className="w-full md:w-1/2 px-4 md:px-20 flex flex-col mt-40 space-y-4">
+                        <p className="uppercase text-red-600 font-semibold text-md md:text-lg">
                             Best Destinations around the world
                         </p>
-                        <h2 className="text-7xl leading-tight text-[#181E4B] font-semibold">
+                        <h2 className="text-3xl md:text-7xl leading-tight text-[#181E4B] font-semibold">
                             Travel, 
                             <span style={{ backgroundImage: `url('${DecoreImg}')`, backgroundPositionX: '20px' }} className="bg-no-repeat bg-bottom bg-[left_20px] bg-contain"> enjoy </span> 
                             and live a new and full life
                         </h2>
-                        <p className="text-[#5E6282] text-lg font-medium">
+                        <p className="text-[#5E6282] md:text-lg md:font-medium">
                             Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.
                         </p>
                         <div className="inline-flex items-center py-4">
@@ -32,7 +32,7 @@ export const Hero = () => {
                             </button>
                         </div>
                     </div>
-                    <div className="absolute right-20 z-40 top-24">
+                    <div className="hidden sm:flex absolute right-20 z-40 top-24">
                         <img src={HeroImg} className="" />
                     </div>
                 </div>
