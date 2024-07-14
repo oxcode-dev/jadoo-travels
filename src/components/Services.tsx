@@ -3,11 +3,11 @@ import { servicesLists } from '../data'
 export const Services = () => {
     return (
         <>
-            <div className="container mx-auto py-10 pt-28 relative">
-                <img className='right-0 absolute' src={TopLeftDecore} />
-                <div className="text-center py-10 pb-6">
-                    <p className="uppercase text-gray-500 font-semibold text-lg mb-4">Category</p>
-                    <h2 className='text-5xl leading-tight text-[#181E4B] font-semibold'>We Offer Best Services</h2>
+            <div className="container mx-auto py-10 pt-28 px-4 relative">
+                <img className='right-0 absolute w-24 md:w-auto' src={TopLeftDecore} />
+                <div className="text-center py-10 pb-6 relative z-10">
+                    <p className="uppercase text-gray-500 font-semibold md:text-lg mb-4">Category</p>
+                    <h2 className='text-3xl md:text-5xl leading-tight text-[#181E4B] font-semibold'>We Offer Best Services</h2>
                 </div>
                 <div className='py-10 grid md:grid-cols-4 gap-8'>
                     {
