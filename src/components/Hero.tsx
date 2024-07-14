@@ -5,9 +5,9 @@ import DecoreImg from "../assets/img/Decore.svg"
 export const Hero = () => {
     return (
         <>
-            <div className="relative w-full bg-no-repeat bg-contain min-h-screen"> 
+            <div className="relative w-full bg-no-repeat bg-contain h-full md:min-h-screen"> 
                 <img src={HeroBanner} className="w-full" />
-                <div className="mx-auto w-full absolute top-0">
+                <div className="-mt-40 md:mt-0  mx-auto w-full md:absolute md:top-0">
                     <div className="w-full md:w-1/2 px-4 md:px-20 flex flex-col mt-40 space-y-4">
                         <p className="uppercase text-red-600 font-semibold text-md md:text-lg">
                             Best Destinations around the world
