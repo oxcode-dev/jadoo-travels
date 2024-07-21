@@ -1,6 +1,7 @@
 import { useState } from "react"
 import logo from "../assets/logo.svg"
 import { navigationLists } from '../data/index.ts'
+import DecoreImg from "../assets/img/Decore.svg"
 
 export const Header = () => {
     const [isActive, setIsActive] = useState(false)
@@ -27,9 +28,10 @@ export const Header = () => {
                         {
                             navigationLists.map((nav, key) => (
                                 <li className="inline-flex h-auto" key={key}>
-                                    <a href="#" className="px-4 md:px-10 py-4 w-full">
-                                        {nav}
-                                    </a>
+                                    <a href="#" className="px-4 md:px-6 py-4 w-full group relative">
+                                        <span>{nav}</span>
+                                        <img src={DecoreImg} className="w-16 absolute bottom-2 hidden group-hover:flex" />
+                                </a>
                                 </li>
                             ))
                         }
