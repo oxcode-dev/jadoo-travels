@@ -36,6 +36,7 @@ export const Header = () => {
                             ))
                         }
                     </ul>
+                    
                     <div className={`md:flex space-x-2 py-4 md:pt-4 bg-white md:bg-transparent ${isActive ? 'flex' : 'hidden'}`}>
                         <div>
                             <a href="#" className="px-8">
