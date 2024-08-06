@@ -3,13 +3,11 @@ import HeroImg from "../assets/img/hero.svg"
 import DecoreImg from "../assets/img/Decore.svg"
 import { motion } from 'framer-motion'
 
-const variants = {
+const opacityVariants = {
     initial: {
-        // x: -500,
         opacity: 0,
     },
     animate: {
-        // x: 0,
         opacity: 1,
         transition: {
             duration: 0.7,
@@ -17,15 +15,46 @@ const variants = {
         },
     },
 };
+
+const leftVariants = {
+    initial: {
+        x: -500,
+        opacity: 0,
+    },
+    animate: {
+        x: 0,
+        opacity: 1,
+        transition: {
+            duration: 1,
+            staggerChildren: 0.1,
+        },
+    },
+};
+const rightVariants = {
+    initial: {
+        x: 500,
+        opacity: 0,
+    },
+    animate: {
+        x: 0,
+        opacity: 1,
+        transition: {
+            duration: 1,
+            staggerChildren: 0.1,
+        },
+    },
+};
 export const Hero = () => {
     return (
         <>
-            <motion.div className="relative w-full bg-no-repeat bg-contain h-full md:min-h-screen" variants={variants}
-      initial="initial"
-      whileInView="animate"> 
+            <motion.div 
+                className="relative w-full bg-no-repeat bg-contain h-full md:min-h-screen" variants={opacityVariants}
+                initial="initial"
+                animate="animate"
+            > 
                 <img src={HeroBanner} className="w-full" />
                 <div className="-mt-40 sm:-mt-64 md:mt-0  mx-auto w-full md:absolute md:top-0">
-                    <div className="w-full md:w-1/2 px-4 md:px-20 flex flex-col mt-40 space-y-4">
+                    <motion.div variants={leftVariants} initial="initial" animate="animate" className="w-full md:w-1/2 px-4 md:px-20 flex flex-col mt-40 space-y-4">
                         <p className="uppercase text-red-600 font-semibold text-md md:text-lg">
                             Best Destinations around the world
                         </p>
@@ -48,10 +77,10 @@ export const Hero = () => {
                                 <span>Play Demo</span>
                             </button>
                         </div>
-                    </div>
-                    <div className="hidden md:flex absolute right-20 z-40 top-24">
+                    </motion.div>
+                    <motion.div variants={rightVariants} initial="initial" animate="animate" className="hidden md:flex absolute right-20 z-40 top-24">
                         <img src={HeroImg} className="" />
-                    </div>
+                    </motion.div>
                 </div>
             </motion.div>
         </>
