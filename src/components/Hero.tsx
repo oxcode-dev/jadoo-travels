@@ -18,7 +18,7 @@ const opacityVariants = {
 
 const leftVariants = {
     initial: {
-        x: -500,
+        x: -100,
         opacity: 0,
     },
     animate: {
@@ -32,7 +32,7 @@ const leftVariants = {
 };
 const rightVariants = {
     initial: {
-        x: 500,
+        x: 100,
         opacity: 0,
     },
     animate: {
@@ -50,11 +50,12 @@ export const Hero = () => {
             <motion.div 
                 className="relative w-full bg-no-repeat bg-contain h-full md:min-h-screen" variants={opacityVariants}
                 initial="initial"
-                animate="animate"
+                whileInView="animate"
+                viewport={{ once: true}}
             > 
                 <img src={HeroBanner} className="w-full" />
                 <div className="-mt-40 sm:-mt-64 md:mt-0  mx-auto w-full md:absolute md:top-0">
-                    <motion.div variants={leftVariants} initial="initial" animate="animate" className="w-full md:w-1/2 px-4 md:px-20 flex flex-col mt-40 space-y-4">
+                    <motion.div variants={leftVariants} viewport={{ once: true}} initial="initial" whileInView="animate" className="w-full md:w-1/2 px-4 md:px-20 flex flex-col mt-40 space-y-4">
                         <p className="uppercase text-red-600 font-semibold text-md md:text-lg">
                             Best Destinations around the world
                         </p>
@@ -78,7 +79,7 @@ export const Hero = () => {
                             </button>
                         </div>
                     </motion.div>
-                    <motion.div variants={rightVariants} initial="initial" animate="animate" className="hidden md:flex absolute right-20 z-40 top-24">
+                    <motion.div variants={rightVariants} viewport={{ once: true}} initial="initial" whileInView="animate" className="hidden md:flex absolute right-20 z-40 top-24">
                         <img src={HeroImg} className="" />
                     </motion.div>
                 </div>
