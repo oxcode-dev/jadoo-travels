@@ -1,11 +1,28 @@
 import HeroBanner from "../assets/img/hero-bg.svg"
 import HeroImg from "../assets/img/hero.svg"
 import DecoreImg from "../assets/img/Decore.svg"
+import { motion } from 'framer-motion'
 
+const variants = {
+    initial: {
+        // x: -500,
+        opacity: 0,
+    },
+    animate: {
+        // x: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.7,
+            staggerChildren: 0.1,
+        },
+    },
+};
 export const Hero = () => {
     return (
         <>
-            <div className="relative w-full bg-no-repeat bg-contain h-full md:min-h-screen"> 
+            <motion.div className="relative w-full bg-no-repeat bg-contain h-full md:min-h-screen" variants={variants}
+      initial="initial"
+      whileInView="animate"> 
                 <img src={HeroBanner} className="w-full" />
                 <div className="-mt-40 sm:-mt-64 md:mt-0  mx-auto w-full md:absolute md:top-0">
                     <div className="w-full md:w-1/2 px-4 md:px-20 flex flex-col mt-40 space-y-4">
@@ -36,7 +53,7 @@ export const Hero = () => {
                         <img src={HeroImg} className="" />
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </>
     )
 }
