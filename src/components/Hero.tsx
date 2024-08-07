@@ -3,6 +3,18 @@ import HeroImg from "../assets/img/hero.svg"
 import DecoreImg from "../assets/img/Decore.svg"
 import { motion } from 'framer-motion'
 
+const titleVariants = {
+    hidden: { y: -50, opacity: 0, },
+    show: { 
+        y: 0,
+        opacity: 1,
+        transition: {
+            type: "spring",
+            duration: 1.25,
+            delay: 1,
+        }
+    },
+}
 const opacityVariants = {
     initial: {
         opacity: 0,
@@ -46,6 +58,20 @@ const rightVariants = {
         },
     },
 };
+const imgVariants = {
+    initial: {
+        height: '0%',
+        opacity: 0,
+    },
+    animate: {
+        height: '100%',
+        opacity: 1,
+        transition: {
+            duration: 2,
+            staggerChildren: 0.1,
+        },
+    },
+};
 const letterVariants = {
     initial: {
         // x: 100,
@@ -71,7 +97,7 @@ export const Hero = () => {
                 whileInView="animate"
                 viewport={{ once: true}}
             > 
-                <img src={HeroBanner} className="w-full" />
+                <motion.img variants={imgVariants} viewport={{ once: true}} initial="initial" whileInView="animate" src={HeroBanner} className="w-full overflow-hidden" />
                 <div className="-mt-40 sm:-mt-64 md:mt-0  mx-auto w-full md:absolute md:top-0">
                     <motion.div variants={leftVariants} viewport={{ once: true}} initial="initial" whileInView="animate" className="w-full md:w-1/2 px-4 md:px-20 flex flex-col mt-40 space-y-4">
                         <motion.p variants={leftVariants} className="uppercase text-red-600 font-semibold text-md md:text-lg">
