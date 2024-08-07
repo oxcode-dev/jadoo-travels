@@ -19,6 +19,22 @@ const opacityVariants = {
 const leftVariants = {
     initial: {
         x: -100,
+        // y: -100,
+        opacity: 0,
+    },
+    animate: {
+        x: 0,
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 1,
+            staggerChildren: 0.2,
+        },
+    },
+};
+const rightVariants = {
+    initial: {
+        x: 100,
         opacity: 0,
     },
     animate: {
@@ -30,13 +46,15 @@ const leftVariants = {
         },
     },
 };
-const rightVariants = {
+const letterVariants = {
     initial: {
-        x: 100,
+        // x: 100,
+        height: 0,
         opacity: 0,
     },
     animate: {
-        x: 0,
+        // x: 0,
+        height: 100,
         opacity: 1,
         transition: {
             duration: 1,
@@ -56,18 +74,18 @@ export const Hero = () => {
                 <img src={HeroBanner} className="w-full" />
                 <div className="-mt-40 sm:-mt-64 md:mt-0  mx-auto w-full md:absolute md:top-0">
                     <motion.div variants={leftVariants} viewport={{ once: true}} initial="initial" whileInView="animate" className="w-full md:w-1/2 px-4 md:px-20 flex flex-col mt-40 space-y-4">
-                        <p className="uppercase text-red-600 font-semibold text-md md:text-lg">
+                        <motion.p variants={leftVariants} className="uppercase text-red-600 font-semibold text-md md:text-lg">
                             Best Destinations around the world
-                        </p>
-                        <h2 className="text-3xl md:text-7xl leading-tight text-[#181E4B] font-semibold">
+                        </motion.p>
+                        <motion.h2 variants={leftVariants} className="text-3xl md:text-7xl leading-tight text-[#181E4B] font-semibold">
                             Travel, 
                             <span style={{ backgroundImage: `url('${DecoreImg}')`, backgroundPositionX: '20px' }} className="bg-no-repeat bg-bottom bg-[left_20px] bg-contain"> enjoy </span> 
                             and live a new and full life
-                        </h2>
-                        <p className="text-[#5E6282] md:text-lg md:font-medium">
+                        </motion.h2>
+                        <motion.p variants={leftVariants} className="text-[#5E6282] md:text-lg md:font-medium">
                             Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.
-                        </p>
-                        <div className="inline-flex items-center py-4">
+                        </motion.p>
+                        <motion.div variants={leftVariants} className="inline-flex items-center py-4">
                             <button type="button" className="bg-yellow-500 text-white p-4 px-6 rounded-lg">
                                 Find out more
                             </button>
@@ -77,7 +95,7 @@ export const Hero = () => {
                                 </span>
                                 <span>Play Demo</span>
                             </button>
-                        </div>
+                        </motion.div>
                     </motion.div>
                     <motion.div variants={rightVariants} viewport={{ once: true}} initial="initial" whileInView="animate" className="hidden md:flex absolute right-20 z-40 top-24">
                         <img src={HeroImg} className="" />
