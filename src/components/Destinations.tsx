@@ -15,22 +15,23 @@ export const titleVariants = {
         }
     },
 }
+
 export const Destinations = () => {
     return (
         <>
             <div className="container mx-auto py-8 relative px-5 md:px-20">
                 <img className='right-4 absolute bottom-40 object-contain z-1' src={Decore} />
-                <div className="text-center py-6 md:py-10">
-                    <motion.p className="text-gray-500 font-semibold text-lg mb-4">Top Selling</motion.p>
-                    <motion.h2 className='text-2xl md:text-5xl leading-tight text-[#181E4B] font-semibold'>Top Destinations</motion.h2>
-                </div>
+                <motion.div variants={titleVariants} initial="hidden" whileInView="show" className="text-center py-6 md:py-10">
+                    <motion.p variants={titleVariants} className="text-gray-500 font-semibold text-lg mb-4">Top Selling</motion.p>
+                    <motion.h2 variants={titleVariants} className='text-2xl md:text-5xl leading-tight text-[#181E4B] font-semibold'>Top Destinations</motion.h2>
+                </motion.div>
                 
                 <div className='py-10 grid md:grid-cols-3 gap-6 md:gap-10 relative z-10'>
                     {
                         destinationsLists.map((list, key) => (
-                            <div key={key} >
+                            <motion.div variants={rightVariants} initial="initial" whileInView="animate" key={key} >
                                 <DestinationCard destination={list} />
-                            </div>
+                            </motion.div>
                         ))
                     }
                 </div>
@@ -50,11 +51,27 @@ interface DestinationInterface {
     destination: DestinationCardProp
 }
 
+export const rightVariants = {
+    initial: {
+        y: -100,
+        opacity: 0,
+    },
+    animate: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 1,
+            delay: 1,
+            staggerChildren: 0.1,
+        },
+    },
+}
+
 const DestinationCard = ( { destination } :DestinationInterface) => {
     const list = destination
     return (
         <>
-            <div className='w-full flex flex-col shadow-lg rounded-b-3xl'>
+            <motion.div variants={rightVariants} className='w-full flex flex-col shadow-lg rounded-b-3xl'>
                 {
                     typeof(list.image) === 'string' && <img src={list.image} alt={list.name} className='object-cover object-top w-full h-80 bg-white' />
                 }
@@ -76,7 +93,7 @@ const DestinationCard = ( { destination } :DestinationInterface) => {
                     </p>    
                 </div>
                 
-            </div>
+            </motion.div>
         </>
     )
 }
