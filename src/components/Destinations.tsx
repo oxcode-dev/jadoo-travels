@@ -1,13 +1,28 @@
 import { destinationsLists } from '../data'
 import Decore from '../assets/img/destination-decore.svg'
+import { motion } from 'framer-motion'
+
+export const titleVariants = {
+    hidden: { y: -50, opacity: 0, },
+    show: { 
+        y: 0,
+        opacity: 1,
+        transition: {
+            // type: "spring",
+            duration: 1.25,
+            // delay: 1,
+            staggerChildren: 0.3,
+        }
+    },
+}
 export const Destinations = () => {
     return (
         <>
             <div className="container mx-auto py-8 relative px-5 md:px-20">
                 <img className='right-4 absolute bottom-40 object-contain z-1' src={Decore} />
                 <div className="text-center py-6 md:py-10">
-                    <p className="text-gray-500 font-semibold text-lg mb-4">Top Selling</p>
-                    <h2 className='text-2xl md:text-5xl leading-tight text-[#181E4B] font-semibold'>Top Destinations</h2>
+                    <motion.p className="text-gray-500 font-semibold text-lg mb-4">Top Selling</motion.p>
+                    <motion.h2 className='text-2xl md:text-5xl leading-tight text-[#181E4B] font-semibold'>Top Destinations</motion.h2>
                 </div>
                 
                 <div className='py-10 grid md:grid-cols-3 gap-6 md:gap-10 relative z-10'>

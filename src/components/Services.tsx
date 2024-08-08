@@ -15,6 +15,22 @@ export const titleVariants = {
         }
     },
 }
+export const leftVariants = {
+    initial: {
+        x: -100,
+        // y: -100,
+        opacity: 0,
+    },
+    animate: {
+        x: 0,
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 1,
+            staggerChildren: 0.2,
+        },
+    },
+};
 export const Services = () => {
     return (
         <>
@@ -24,21 +40,21 @@ export const Services = () => {
                     <motion.p variants={titleVariants} className="uppercase text-gray-500 font-semibold md:text-lg mb-4">Category</motion.p>
                     <motion.h2 variants={titleVariants} className='text-3xl md:text-5xl leading-tight text-[#181E4B] font-semibold'>We Offer Best Services</motion.h2>
                 </motion.div>
-                <div className='py-10 grid md:grid-cols-4 gap-8'>
+                <motion.div variants={leftVariants} initial="initial" whileInView='animate' viewport={{ once: true}} className='py-10 grid md:grid-cols-4 gap-8'>
                     {
                         servicesLists.map((list, key) => (
-                            <div key={key} className='flex flex-col justify-center items-center p-10 text-center border-gray-50 hover:border hover:shadow-lg rounded-3xl space-y-4'>
-                                <img src={list.icon} alt={list.title} className='object-cover h-16' />
-                                <p className='text-[#181E4B] text-xl font-medium'>
+                            <motion.div variants={leftVariants} key={key} className='flex flex-col justify-center items-center p-10 text-center border-gray-50 hover:border hover:shadow-lg rounded-3xl space-y-4'>
+                                <motion.img variants={leftVariants} src={list.icon} alt={list.title} className='object-cover h-16' />
+                                <motion.p variants={leftVariants} className='text-[#181E4B] text-xl font-medium'>
                                     {list.title}
-                                </p>
-                                <p className="text-[#5E6282] text-base">
+                                </motion.p>
+                                <motion.p variants={leftVariants} className="text-[#5E6282] text-base">
                                     {list.description}
-                                </p>
-                            </div>
+                                </motion.p>
+                            </motion.div>
                         ))
                     }
-                </div>
+                </motion.div>
             </div> 
         </>
     )
