@@ -2,7 +2,7 @@ import HeroBanner from "../assets/img/hero-bg.svg"
 import HeroImg from "../assets/img/hero.svg"
 import DecoreImg from "../assets/img/Decore.svg"
 import { motion } from 'framer-motion'
-import { opacityVariants, imgVariants, leftVariants, rightVariants} from '../data/hero-variants.js'
+import { opacityVariants, imgVariants, leftVariants, rightVariants} from '../data/hero-variants'
 
 
 export const Hero = () => {
