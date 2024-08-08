@@ -53,7 +53,7 @@ interface DestinationInterface {
 
 export const rightVariants = {
     initial: {
-        y: -100,
+        y: 100,
         opacity: 0,
     },
     animate: {
