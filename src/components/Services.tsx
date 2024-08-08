@@ -1,14 +1,29 @@
 import TopLeftDecore from '../assets/img/top-left-decore.svg'
 import { servicesLists } from '../data'
+import { motion } from 'framer-motion'
+
+export const titleVariants = {
+    hidden: { y: -50, opacity: 0, },
+    show: { 
+        y: 0,
+        opacity: 1,
+        transition: {
+            // type: "spring",
+            duration: 1.25,
+            // delay: 1,
+            staggerChildren: 0.3,
+        }
+    },
+}
 export const Services = () => {
     return (
         <>
             <div className="container mx-auto py-10 pt-28 px-4 relative">
                 <img className='right-0 absolute w-24 md:w-auto' src={TopLeftDecore} />
-                <div className="text-center py-10 pb-6 relative z-10">
-                    <p className="uppercase text-gray-500 font-semibold md:text-lg mb-4">Category</p>
-                    <h2 className='text-3xl md:text-5xl leading-tight text-[#181E4B] font-semibold'>We Offer Best Services</h2>
-                </div>
+                <motion.div variants={titleVariants} viewport={{ once: true}} initial='hidden' whileInView='show' className="text-center py-10 pb-6 relative z-10">
+                    <motion.p variants={titleVariants} className="uppercase text-gray-500 font-semibold md:text-lg mb-4">Category</motion.p>
+                    <motion.h2 variants={titleVariants} className='text-3xl md:text-5xl leading-tight text-[#181E4B] font-semibold'>We Offer Best Services</motion.h2>
+                </motion.div>
                 <div className='py-10 grid md:grid-cols-4 gap-8'>
                     {
                         servicesLists.map((list, key) => (
