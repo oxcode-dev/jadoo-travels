@@ -62,7 +62,7 @@ export const rightVariants = {
         transition: {
             duration: 1,
             delay: 1,
-            staggerChildren: 0.1,
+            staggerChildren: 0.3,
         },
     },
 }
