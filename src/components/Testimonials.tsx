@@ -1,30 +1,63 @@
+import {motion} from 'framer-motion'
+export const leftVariants = {
+    initial: {
+        x: -100,
+        // y: -100,
+        opacity: 0,
+    },
+    animate: {
+        x: 0,
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 1,
+            staggerChildren: 0.5,
+        },
+    },
+};
 
+export const rightVariants = {
+    initial: {
+        x: 100,
+        // y: -100,
+        opacity: 0,
+    },
+    animate: {
+        x: 0,
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 1,
+            staggerChildren: 0.2,
+        },
+    },
+};
 export const Testimonials = () => {
     return (
         <>
            <div className="container mx-auto py-12 px-4">
                 <div className="w-full flex flex-wrap md:flex-nowrap">
-                    <div className="w-full">
-                        <div className='flex flex-col space-y-6 pb-6'>
-                            <p className="uppercase text-slate-500 font-semibold text-base">
+                    <motion.div variants={leftVariants} initial='initial' whileInView='animate' className="w-full">
+                        <motion.div variants={leftVariants} className='flex flex-col space-y-6 pb-6'>
+                            <motion.p variants={leftVariants} className="uppercase text-slate-500 font-semibold text-base">
                                 Testimonials
-                            </p>
-                            <h2 className="text-3xl md:text-5xl leading-tight text-[#181E4B] font-semibold">
+                            </motion.p>
+                            <motion.h2 variants={leftVariants} className="text-3xl md:text-5xl leading-tight text-[#181E4B] font-semibold">
                                 What People Say <br /> About Us.
-                            </h2>
-                        </div>
-                    </div>
-                    <div className="w-full relative">
-                        <div>
+                            </motion.h2>
+                        </motion.div>
+                    </motion.div>
+                    <motion.div variants={rightVariants} initial='initial' whileInView='animate' className="w-full relative">
+                        <motion.div variants={rightVariants}>
                             <TestimonialCard />
-                        </div>
+                        </motion.div>
                         {/* <div>
                             <TestimonialCard />
                         </div>
                         <div>
                             <TestimonialCard />
                         </div> */}
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </>
