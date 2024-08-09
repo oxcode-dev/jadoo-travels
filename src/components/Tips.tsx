@@ -1,20 +1,54 @@
+import { motion } from 'framer-motion';
 import BookingImage from '../assets/img/booking-img.svg'
 import { tipsList } from '../data/index'
 
+export const leftVariants = {
+    initial: {
+        x: -100,
+        // y: -100,
+        opacity: 0,
+    },
+    animate: {
+        x: 0,
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 1,
+            staggerChildren: 0.5,
+        },
+    },
+};
+
+export const rightVariants = {
+    initial: {
+        x: 100,
+        // y: -100,
+        opacity: 0,
+    },
+    animate: {
+        x: 0,
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 1,
+            staggerChildren: 0.2,
+        },
+    },
+};
 export const Tips = () => {
     return (
         <>
             <div className="container mx-auto px-4 py-16">
                 <div className="w-full flex flex-wrap md:flex-nowrap">
-                    <div className="w-full">
-                        <div className='flex flex-col space-y-6'>
-                            <p className="uppercase text-slate-500 font-semibold text-base">
+                    <motion.div variants={leftVariants} initial="initial" whileInView="animate" className="w-full">
+                        <motion.div variants={leftVariants} className='flex flex-col space-y-6'>
+                            <motion.p variants={leftVariants} className="uppercase text-slate-500 font-semibold text-base">
                                 Easy and Fast
-                            </p>
-                            <h2 className="text-3xl md:text-5xl leading-tight text-[#181E4B] font-semibold">
+                            </motion.p>
+                            <motion.h2 variants={leftVariants} className="text-3xl md:text-5xl leading-tight text-[#181E4B] font-semibold">
                                 Book Your Next Trip <br /> In 3 Easy Steps
-                            </h2>
-                            <div className='space-y-4 py-4'>
+                            </motion.h2>
+                            <motion.div variants={leftVariants} className='space-y-4 py-4'>
                                 {
                                     tipsList.map((list, key) => (
                                         <div key={key}>
@@ -22,12 +56,12 @@ export const Tips = () => {
                                         </div>
                                     ))
                                 }
-                            </div>
-                        </div>
-                    </div>
-                    <div className="w-full">
-                        <img src={BookingImage} />
-                    </div>
+                            </motion.div>
+                        </motion.div>
+                    </motion.div>
+                    <motion.div variants={rightVariants} initial="initial" whileInView="animate" className="w-full">
+                        <motion.img variants={rightVariants} src={BookingImage} />
+                    </motion.div>
                 </div>
             </div>
         </>
