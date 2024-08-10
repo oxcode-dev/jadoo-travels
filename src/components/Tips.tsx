@@ -5,7 +5,6 @@ import { tipsList } from '../data/index'
 export const leftVariants = {
     initial: {
         x: -100,
-        // y: -100,
         opacity: 0,
     },
     animate: {
