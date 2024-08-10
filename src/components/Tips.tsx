@@ -21,7 +21,6 @@ export const leftVariants = {
 export const rightVariants = {
     initial: {
         x: 100,
-        // y: -100,
         opacity: 0,
     },
     animate: {
