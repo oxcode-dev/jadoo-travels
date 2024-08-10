@@ -8,9 +8,7 @@ export const titleVariants = {
         y: 0,
         opacity: 1,
         transition: {
-            // type: "spring",
             duration: 1.25,
-            // delay: 1,
             staggerChildren: 0.3,
         }
     },
