@@ -40,7 +40,7 @@ export const Services = () => {
                     <motion.p variants={titleVariants} className="uppercase text-gray-500 font-semibold md:text-lg mb-4">Category</motion.p>
                     <motion.h2 variants={titleVariants} className='text-3xl md:text-5xl leading-tight text-[#181E4B] font-semibold'>We Offer Best Services</motion.h2>
                 </motion.div>
-                <motion.div variants={leftVariants} initial="initial" whileInView='animate' viewport={{ once: true}} className='py-10 grid md:grid-cols-4 gap-8'>
+                <motion.div variants={leftVariants} initial="initial" whileInView='animate' className='py-10 grid md:grid-cols-4 gap-8'>
                     {
                         servicesLists.map((list, key) => (
                             <motion.div variants={leftVariants} key={key} className='flex flex-col justify-center items-center p-10 text-center border-gray-50 hover:border hover:shadow-lg rounded-3xl space-y-4'>
