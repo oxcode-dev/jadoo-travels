@@ -36,7 +36,7 @@ export const Services = () => {
         <>
             <div className="container mx-auto py-10 pt-28 px-4 relative">
                 <img className='right-0 absolute w-24 md:w-auto' src={TopLeftDecore} />
-                <motion.div variants={titleVariants} viewport={{ once: true}} initial='hidden' whileInView='show' className="text-center py-10 pb-6 relative z-10">
+                <motion.div variants={titleVariants} initial='hidden' whileInView='show' className="text-center py-10 pb-6 relative z-10">
                     <motion.p variants={titleVariants} className="uppercase text-gray-500 font-semibold md:text-lg mb-4">Category</motion.p>
                     <motion.h2 variants={titleVariants} className='text-3xl md:text-5xl leading-tight text-[#181E4B] font-semibold'>We Offer Best Services</motion.h2>
                 </motion.div>
