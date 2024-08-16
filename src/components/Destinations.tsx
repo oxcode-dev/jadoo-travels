@@ -96,4 +96,3 @@ const DestinationCard = ( { destination } :DestinationInterface) => {
     )
 }
 
-
