@@ -95,3 +95,5 @@ const DestinationCard = ( { destination } :DestinationInterface) => {
         </>
     )
 }
+
+
